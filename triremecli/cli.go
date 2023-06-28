@@ -7,17 +7,17 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/aporeto-inc/trireme-example/constructors"
-	"github.com/aporeto-inc/trireme-example/extractors"
+	"github.com/headingy/trireme-example/constructors"
+	"github.com/headingy/trireme-example/extractors"
 
-	"github.com/aporeto-inc/trireme"
-	"github.com/aporeto-inc/trireme/cmd/remoteenforcer"
-	"github.com/aporeto-inc/trireme/cmd/systemdutil"
-	"github.com/aporeto-inc/trireme/enforcer"
-	"github.com/aporeto-inc/trireme/monitor"
-	"github.com/aporeto-inc/trireme/monitor/cliextractor"
-	"github.com/aporeto-inc/trireme/monitor/dockermonitor"
-	"github.com/aporeto-inc/trireme/processmon"
+	"github.com/headingy/trireme"
+	"github.com/headingy/trireme/cmd/remoteenforcer"
+	"github.com/headingy/trireme/cmd/systemdutil"
+	"github.com/headingy/trireme/enforcer"
+	"github.com/headingy/trireme/monitor"
+	"github.com/headingy/trireme/monitor/cliextractor"
+	"github.com/headingy/trireme/monitor/dockermonitor"
+	"github.com/headingy/trireme/processmon"
 )
 
 // KillContainerOnError defines if the Container is getting killed if the policy Application resulted in an error

@@ -5,8 +5,8 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/aporeto-inc/trireme-example/triremecli"
 	docopt "github.com/docopt/docopt-go"
+	"github.com/headingy/trireme-example/triremecli"
 	"go.uber.org/zap"
 )
 

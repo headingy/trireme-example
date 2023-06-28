@@ -7,15 +7,15 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/aporeto-inc/trireme"
-	"github.com/aporeto-inc/trireme/configurator"
-	"github.com/aporeto-inc/trireme/crypto"
-	"github.com/aporeto-inc/trireme/enforcer"
-	"github.com/aporeto-inc/trireme/enforcer/utils/pkiverifier"
-	"github.com/aporeto-inc/trireme/monitor"
-	"github.com/aporeto-inc/trireme/monitor/dockermonitor"
+	"github.com/headingy/trireme"
+	"github.com/headingy/trireme/configurator"
+	"github.com/headingy/trireme/crypto"
+	"github.com/headingy/trireme/enforcer"
+	"github.com/headingy/trireme/enforcer/utils/pkiverifier"
+	"github.com/headingy/trireme/monitor"
+	"github.com/headingy/trireme/monitor/dockermonitor"
 
-	"github.com/aporeto-inc/trireme-example/policyexample"
+	"github.com/headingy/trireme-example/policyexample"
 )
 
 var (
@@ -60,7 +60,7 @@ func TriremeWithPKI(keyFile, certFile, caCertFile string, networks []string, ext
 	return t, m
 }
 
-//TriremeWithPSK is a helper method to created a PSK implementation of Trireme
+// TriremeWithPSK is a helper method to created a PSK implementation of Trireme
 func TriremeWithPSK(networks []string, extractor *dockermonitor.DockerMetadataExtractor, remoteEnforcer bool, killContainerError bool) (trireme.Trireme, monitor.Monitor) {
 
 	policyEngine := policyexample.NewCustomPolicyResolver(networks)
@@ -69,7 +69,7 @@ func TriremeWithPSK(networks []string, extractor *dockermonitor.DockerMetadataEx
 	return configurator.NewPSKTriremeWithDockerMonitor("Server1", policyEngine, ExternalProcessor, nil, false, []byte("THIS IS A BAD PASSWORD"), *extractor, remoteEnforcer, killContainerError)
 }
 
-//HybridTriremeWithPSK is a helper method to created a PSK implementation of Trireme
+// HybridTriremeWithPSK is a helper method to created a PSK implementation of Trireme
 func HybridTriremeWithPSK(networks []string, extractor *dockermonitor.DockerMetadataExtractor, killContainerError bool) (trireme.Trireme, monitor.Monitor, monitor.Monitor) {
 
 	policyEngine := policyexample.NewCustomPolicyResolver(networks)

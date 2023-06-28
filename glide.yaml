@@ -1,6 +1,6 @@
-package: github.com/aporeto-inc/trireme-example
+package: github.com/headingy/trireme-example
 import:
-- package: github.com/aporeto-inc/trireme
+- package: github.com/headingy/trireme
   version: 23b6274d6493ca316402fb5c558e48750959863c
   subpackages:
   - cmd/remoteenforcer

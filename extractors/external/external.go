@@ -5,16 +5,16 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/aporeto-inc/trireme/constants"
-	"github.com/aporeto-inc/trireme/policy"
 	"github.com/docker/docker/api/types"
+	"github.com/headingy/trireme/constants"
+	"github.com/headingy/trireme/policy"
 )
 
 /*
 
 Standard example of an external docker metadata extractor.
 INPUT as arg[1]: The docker Container JSON with all the related information as defined in github.com/docker/docker/api/types
-OUTPUT on STDPUT: The JSON representation (marshalled) of the PURuntime as defined in github.com/aporeto-inc/trireme/policy
+OUTPUT on STDPUT: The JSON representation (marshalled) of the PURuntime as defined in github.com/headingy/trireme/policy
 
 */
 

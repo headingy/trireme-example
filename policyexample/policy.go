@@ -3,9 +3,9 @@ package policyexample
 import (
 	"fmt"
 
-	"github.com/aporeto-inc/trireme"
-	"github.com/aporeto-inc/trireme/monitor"
-	"github.com/aporeto-inc/trireme/policy"
+	"github.com/headingy/trireme"
+	"github.com/headingy/trireme/monitor"
+	"github.com/headingy/trireme/policy"
 	"go.uber.org/zap"
 )
 

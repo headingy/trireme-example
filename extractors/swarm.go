@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/aporeto-inc/trireme/constants"
-	"github.com/aporeto-inc/trireme/policy"
 	"github.com/docker/docker/api/types"
+	"github.com/headingy/trireme/constants"
+	"github.com/headingy/trireme/policy"
 
 	dockerClient "github.com/docker/docker/client"
 )
